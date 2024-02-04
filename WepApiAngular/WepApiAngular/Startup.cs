@@ -46,6 +46,10 @@ namespace WepApiAngular
 
             app.UseHttpsRedirection();
             app.UseRouting();
+
+            // angular üzerinden istek atılması için eklendi
+            app.UseCors(policy=>policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
             app.UseAuthorization();
 
             //middlewaare

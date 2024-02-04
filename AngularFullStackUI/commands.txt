@@ -1,0 +1,26 @@
+https://www.youtube.com/watch?v=CdE6rVfPJ9I
+izlenilen video
+https://angular.dev/
+https://angular.dev/overview
+
+ng version
+angular versiyon kontrolu
+
+ng new AngularFullStack.UI
+bu angular projesi oluşturmak için kullanılan komut  çalıştırırken dosya dizinine dikkat edin
+
+ng serve --o
+serveri çalıştırmak için kullanılıyor. AngularFullStack.UI/ dizini altında çalıştır.
+
+ng g c book-list
+burada komponent oluştururlur. ng angular, g generate, c component, sondaki isimlendirme. 
+oluşturulmak istenen klasorun altında calıstırın
+
+ng g s books
+burada servis oluştururlur. ng angular, g generate, s servis, sondaki isimlendirme. 
+oluşturulmak istenen klasorun altında calıstırın
+
+ng g environments
+
+burada environments oluştururlur. src/ altında 
+oluşturulmak istenen klasorun altında calıstırın
