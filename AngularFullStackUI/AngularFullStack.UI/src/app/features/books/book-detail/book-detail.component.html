@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Book Detail</h1>
+    <form #form="ngForm" >
+        <div class="mt-2">
+            <div class="mt-3">
+                <label class="form-label">Title</label>
+                <label  id="Title"  class="form-control" >{{model.title}}</label>
+            </div>
+            <div class="mt-3">
+                <label class="form-label">Genre</label>
+                <label  id="Genre"  class="form-control" >{{model.genre}}</label>
+            </div>
+            <div class="mt-3">
+                <label class="form-label">AuthorId</label>
+                <label  id="Author"  class="form-control" >{{model.author}}</label>
+            </div>
+            <div class="mt-3">
+                <label class="form-label">PageCount</label>
+                <label  id="PageCount"  class="form-control" >{{model.pageCount}}</label>
+            </div>
+            <div class="mt-3">
+                <label class="form-label">PublishDate</label>
+                <label  id="PublishDate"  class="form-control" >{{model.publishDate}}</label>
+            </div>
+        </div>
+    </form>
+</div>
