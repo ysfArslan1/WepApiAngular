@@ -1,8 +1,10 @@
-export interface BookResponce{
-    Id:number;
-    Title:string;
-    AuthorId:string;
-    GenreId:string;
-    PageCount:string;
-    PublishDate:string;
+
+
+export interface BookResponse{
+    id:number;
+    title:string;
+    author:string;
+    genre:string;
+    pageCount:string;
+    publishDate:string;
 }
