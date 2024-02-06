@@ -1,0 +1,27 @@
+<div class="container">
+
+    <h1 class="mt-3">Books</h1>
+  
+    <div class="justify-content-end mt-3">
+  
+      <table class="table" *ngIf="genres && genres.length >0">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let genre of genres">
+              <td>{{ genre.id }}</td>
+              <td>{{ genre.name }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p *ngIf="!genres || genres.length <= 0">No Genres Found</p>
+  
+  
+    </div>
+  
+  
+  </div>
