@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { GenreResponse } from '../models/genre-responce.model';
-import { GenresServiceService } from '../services/genres.service.service';
+import { GenresServiceService } from '../services/genres.service';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
