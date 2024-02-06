@@ -12,25 +12,33 @@
           <tr>
             <th scope="col">Id</th>
             <th scope="col">Title</th>
-            <th scope="col">AuthorId</th>
-            <th scope="col">GenreId</th>
+            <th scope="col">Author</th>
+            <th scope="col">Genre</th>
             <th scope="col">PageCount</th>
             <th scope="col">PublishDate</th>
+            <th scope="col">Detail</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let book of books">
-            <td>{{ book.Id }}</td>
-            <td>{{ book.Title }}</td>
-            <td>{{ book.AuthorId }}</td>
-            <td>{{ book.GenreId }}</td>
-            <td>{{ book.PageCount }}</td>
-            <td>{{ book.PublishDate }}</td>
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.genre }}</td>
+            <td>{{ book.pageCount }}</td>
+            <td>{{ book.publishDate }}</td>
+            <td><a class="btn btn-primary" [routerLink]="['/books/detail', book.id]">Detail</a></td>
+            <td><a class="btn btn-primary" [routerLink]="['/books/update', book.id]">Update</a></td>
+            <td><a class="btn btn-danger" (click)="DeleteBook(book.id)">Delete</a></td>
           </tr>
         </tbody>
       </table>
       <p *ngIf="!books || books.length <= 0">No Books Found</p>
 
+
   </div>
+
 
 </div>
