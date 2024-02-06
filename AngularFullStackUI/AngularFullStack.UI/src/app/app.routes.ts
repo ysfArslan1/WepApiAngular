@@ -3,6 +3,7 @@ import { BookListComponent } from './features/books/book-list/book-list.componen
 import { AddBookComponent } from './features/books/add-book/add-book.component';
 import { UpdateBookComponent } from './features/books/update-book/update-book.component';
 import { BookDetailComponent } from './features/books/book-detail/book-detail.component';
+import { GenreListComponent } from './features/genres/genre-list/genre-list.component';
 
 export const routes: Routes = [
     {
@@ -24,5 +25,9 @@ export const routes: Routes = [
     {
         path:'books/detail/:id',
         component:BookDetailComponent
+    },
+    {
+        path:'genres',
+        component:GenreListComponent
     }
 ];
