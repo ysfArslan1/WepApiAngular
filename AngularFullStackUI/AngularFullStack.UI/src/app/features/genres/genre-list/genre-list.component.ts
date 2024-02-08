@@ -32,4 +32,17 @@ export class GenreListComponent {
     });
   }
 
+  DeleteGenre(id: number) {
+    this.booksService.deleteGenre(id)
+    .subscribe({
+      next(response) {
+        console.log('succsesful');
+        console.log(response);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
+
 }

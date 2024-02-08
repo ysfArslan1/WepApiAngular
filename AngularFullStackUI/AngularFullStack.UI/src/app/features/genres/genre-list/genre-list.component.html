@@ -3,18 +3,27 @@
     <h1 class="mt-3">Books</h1>
   
     <div class="justify-content-end mt-3">
+      <div>
+        <a id="addBtn" href="/genres/add" class="btn btn-primary" >Add Genre</a>
+      </div>
   
       <table class="table" *ngIf="genres && genres.length >0">
           <thead>
             <tr>
               <th scope="col">Id</th>
               <th scope="col">Name</th>
+              <th scope="col">Detail</th>
+              <th scope="col">Update</th>
+              <th scope="col">Delete</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let genre of genres">
               <td>{{ genre.id }}</td>
               <td>{{ genre.name }}</td>
+              <td><a class="btn btn-primary" [routerLink]="['/genres/detail', genre.id]">Detail</a></td>
+              <td><a class="btn btn-primary" [routerLink]="['/genres/update', genre.id]">Update</a></td>
+              <td><a class="btn btn-danger" (click)="DeleteGenre(genre.id)">Delete</a></td>
             </tr>
           </tbody>
         </table>
