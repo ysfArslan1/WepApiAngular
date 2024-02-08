@@ -46,7 +46,7 @@ export class UpdateBookComponent  implements OnInit {
         const date = data.publishDate.split(' ')[0]
         const [month, day, year] = date.split('.');
         this.model.PublishDate = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
-        this.model.PublishDate=new Date(data.publishDate);;
+        this.model.PublishDate=new Date(data.publishDate);
       },
       error: (err) => {
         console.log(err);
