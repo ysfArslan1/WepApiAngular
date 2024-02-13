@@ -20,24 +20,20 @@ export class BooksService {
   }
 
   getBookById(id:number): Observable<BookResponse> {
-    console.log(id);
     return this.httpClient.get<BookResponse>(this.baseApiUrl+'Books/'+id);
   }
 
   addBook(model:AddBookRequest):Observable<void>{
-    console.log("add book");
     console.log(this.baseApiUrl+'Books');
     return this.httpClient.post<void>(this.baseApiUrl+'Books',model);
   }
 
   updateBook(id:number,model:UpdateBookRequest):Observable<void>{
-    console.log("update book");
     console.log(this.baseApiUrl+'Books/'+id);
     return this.httpClient.put<void>(this.baseApiUrl+'Books/'+id,model);
   }
 
   deleteBook(id:number):Observable<void>{
-    console.log("update book");
     console.log(this.baseApiUrl+'Books/'+id);
     return this.httpClient.delete<void>(this.baseApiUrl+'Books/'+id);
   }
