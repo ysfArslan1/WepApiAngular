@@ -13,13 +13,14 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './genre-list.component.css'
 })
 export class GenreListComponent {
-  genres: GenreResponse[]=[]
 
-  booksService = inject(GenresServiceService)
+  genres: GenreResponse[]=[]
+  genresService = inject(GenresServiceService)
+
   constructor(){}
   ngOnInit(): void{
     
-    this.booksService.getAllGenres()
+    this.genresService.getAllGenres()
     .subscribe({
       next: (data) => {
         if (data && data.length > 0) {
@@ -33,7 +34,7 @@ export class GenreListComponent {
   }
 
   DeleteGenre(id: number) {
-    this.booksService.deleteGenre(id)
+    this.genresService.deleteGenre(id)
     .subscribe({
       next(response) {
         console.log('succsesful');
